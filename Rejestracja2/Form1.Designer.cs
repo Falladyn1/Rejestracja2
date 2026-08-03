@@ -46,7 +46,7 @@
             ClientSize = new Size(1262, 673);
             Controls.Add(panelMain);
             Name = "Form1";
-            Text = "Form1";
+            Text = "SRP";
             ResumeLayout(false);
         }
 

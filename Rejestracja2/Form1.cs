@@ -9,8 +9,18 @@ namespace Rejestracja2
             UcLogin loginPanel = new UcLogin();
             loginPanel.Dock = DockStyle.Fill;
             panelMain.Controls.Add(loginPanel);
-        }
-        
 
+            loginPanel.LoginSucceeded += LoginPanel_LoginSucceeded;
+
+
+        }
+
+        private void LoginPanel_LoginSucceeded(object? sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            UcDashboard ucDashboard = new UcDashboard();
+            panelMain.Controls.Add(ucDashboard);
+            
+        }
     }
 }
