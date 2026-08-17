@@ -15,14 +15,12 @@ namespace Rejestracja2
         public UcDashboard()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            panelMainDashboard.Controls.Clear();
-            UcMainPanel mainPanel = new UcMainPanel();
-            mainPanel.Dock = DockStyle.Fill;
-            panelMainDashboard.Controls.Add(mainPanel);
+            labelTime.Text = System.DateTime.Now.ToString("dd.MM.yyyy\nHH:mm:ss");
         }
     }
 }

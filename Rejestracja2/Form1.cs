@@ -18,7 +18,7 @@ namespace Rejestracja2
         private void LoginPanel_LoginSucceeded(object? sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            UcDashboard ucDashboard = new UcDashboard();
+            UcMainPanel ucDashboard = new UcMainPanel();
             panelMain.Controls.Add(ucDashboard);
             
         }

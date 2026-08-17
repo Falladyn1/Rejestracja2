@@ -28,162 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            btnNewVisit = new Button();
-            btnNewPatient = new Button();
-            panelPatientNum = new Panel();
-            labelNumOfPatients = new Label();
-            label2 = new Label();
-            panelNewPatients = new Panel();
-            labelNumOfNewPatients = new Label();
+            panelMenu = new Panel();
+            button1 = new Button();
+            btnDashboard = new Button();
+            panelMainDashboard = new Panel();
             label1 = new Label();
-            labelTime = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
-            panelPatientNum.SuspendLayout();
-            panelNewPatients.SuspendLayout();
+            panelMenu.SuspendLayout();
+            panelMainDashboard.SuspendLayout();
             SuspendLayout();
             // 
-            // btnNewVisit
+            // panelMenu
             // 
-            btnNewVisit.BackColor = Color.FromArgb(46, 204, 113);
-            btnNewVisit.FlatAppearance.BorderSize = 0;
-            btnNewVisit.FlatStyle = FlatStyle.Flat;
-            btnNewVisit.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnNewVisit.ForeColor = Color.White;
-            btnNewVisit.Location = new Point(95, 576);
-            btnNewVisit.Name = "btnNewVisit";
-            btnNewVisit.Size = new Size(156, 58);
-            btnNewVisit.TabIndex = 0;
-            btnNewVisit.Text = "Umów wizytę";
-            btnNewVisit.UseVisualStyleBackColor = false;
+            panelMenu.BackColor = Color.FromArgb(33, 43, 54);
+            panelMenu.Controls.Add(button1);
+            panelMenu.Controls.Add(btnDashboard);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(146, 673);
+            panelMenu.TabIndex = 0;
             // 
-            // btnNewPatient
+            // button1
             // 
-            btnNewPatient.BackColor = Color.FromArgb(241, 196, 15);
-            btnNewPatient.FlatAppearance.BorderSize = 0;
-            btnNewPatient.FlatStyle = FlatStyle.Flat;
-            btnNewPatient.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnNewPatient.ForeColor = Color.White;
-            btnNewPatient.Location = new Point(257, 576);
-            btnNewPatient.Name = "btnNewPatient";
-            btnNewPatient.Size = new Size(156, 58);
-            btnNewPatient.TabIndex = 1;
-            btnNewPatient.Text = "Nowy Pacjent";
-            btnNewPatient.UseVisualStyleBackColor = false;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 78);
+            button1.Name = "button1";
+            button1.Size = new Size(146, 60);
+            button1.TabIndex = 1;
+            button1.Text = "Lista Pacjentów";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // panelPatientNum
+            // btnDashboard
             // 
-            panelPatientNum.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panelPatientNum.AutoSize = true;
-            panelPatientNum.BackColor = Color.FromArgb(46, 204, 113);
-            panelPatientNum.Controls.Add(labelNumOfPatients);
-            panelPatientNum.Controls.Add(label2);
-            panelPatientNum.Location = new Point(18, 16);
-            panelPatientNum.Name = "panelPatientNum";
-            panelPatientNum.Size = new Size(233, 185);
-            panelPatientNum.TabIndex = 10;
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Location = new Point(0, 12);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(146, 60);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Panel Główny";
+            btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
-            // labelNumOfPatients
+            // panelMainDashboard
             // 
-            labelNumOfPatients.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            labelNumOfPatients.AutoSize = true;
-            labelNumOfPatients.Font = new Font("Segoe UI", 24F);
-            labelNumOfPatients.ForeColor = Color.White;
-            labelNumOfPatients.Location = new Point(87, 72);
-            labelNumOfPatients.Name = "labelNumOfPatients";
-            labelNumOfPatients.Size = new Size(45, 54);
-            labelNumOfPatients.TabIndex = 2;
-            labelNumOfPatients.Text = "0";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(3, 5);
-            label2.Name = "label2";
-            label2.Size = new Size(165, 28);
-            label2.TabIndex = 1;
-            label2.Text = "Liczba wizyt dziś:";
-            // 
-            // panelNewPatients
-            // 
-            panelNewPatients.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panelNewPatients.AutoSize = true;
-            panelNewPatients.BackColor = Color.FromArgb(241, 196, 15);
-            panelNewPatients.Controls.Add(labelNumOfNewPatients);
-            panelNewPatients.Controls.Add(label1);
-            panelNewPatients.Location = new Point(257, 16);
-            panelNewPatients.Name = "panelNewPatients";
-            panelNewPatients.Size = new Size(233, 185);
-            panelNewPatients.TabIndex = 9;
-            // 
-            // labelNumOfNewPatients
-            // 
-            labelNumOfNewPatients.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            labelNumOfNewPatients.AutoSize = true;
-            labelNumOfNewPatients.Font = new Font("Segoe UI", 24F);
-            labelNumOfNewPatients.ForeColor = Color.White;
-            labelNumOfNewPatients.Location = new Point(97, 72);
-            labelNumOfNewPatients.Name = "labelNumOfNewPatients";
-            labelNumOfNewPatients.Size = new Size(45, 54);
-            labelNumOfNewPatients.TabIndex = 3;
-            labelNumOfNewPatients.Text = "0";
+            panelMainDashboard.Controls.Add(label1);
+            panelMainDashboard.Location = new Point(152, 3);
+            panelMainDashboard.Name = "panelMainDashboard";
+            panelMainDashboard.Size = new Size(1107, 667);
+            panelMainDashboard.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(3, 5);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.Location = new Point(346, 284);
             label1.Name = "label1";
-            label1.Size = new Size(143, 28);
-            label1.TabIndex = 1;
-            label1.Text = "Nowi pacjenci:";
-            // 
-            // labelTime
-            // 
-            labelTime.Font = new Font("Segoe UI Semibold", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            labelTime.Location = new Point(513, 16);
-            labelTime.Name = "labelTime";
-            labelTime.Size = new Size(352, 133);
-            labelTime.TabIndex = 11;
-            labelTime.Text = "time";
-            // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
+            label1.Size = new Size(428, 41);
+            label1.TabIndex = 0;
+            label1.Text = "System Rezerwacji Pacjentów";
             // 
             // UcMainPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(labelTime);
-            Controls.Add(panelPatientNum);
-            Controls.Add(panelNewPatients);
-            Controls.Add(btnNewPatient);
-            Controls.Add(btnNewVisit);
+            Controls.Add(panelMainDashboard);
+            Controls.Add(panelMenu);
             Name = "UcMainPanel";
-            Size = new Size(1107, 667);
-            panelPatientNum.ResumeLayout(false);
-            panelPatientNum.PerformLayout();
-            panelNewPatients.ResumeLayout(false);
-            panelNewPatients.PerformLayout();
+            Size = new Size(1262, 673);
+            panelMenu.ResumeLayout(false);
+            panelMainDashboard.ResumeLayout(false);
+            panelMainDashboard.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button btnNewVisit;
-        private Button btnNewPatient;
-        private Panel panelPatientNum;
-        private Label labelNumOfPatients;
-        private Label label2;
-        private Panel panelNewPatients;
-        private Label labelNumOfNewPatients;
+        private Panel panelMenu;
+        private Panel panelMainDashboard;
+        private Button button1;
+        private Button btnDashboard;
         private Label label1;
-        private Label labelTime;
-        private System.Windows.Forms.Timer timer1;
     }
 }
