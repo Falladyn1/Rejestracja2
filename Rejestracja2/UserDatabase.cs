@@ -8,14 +8,13 @@ namespace Rejestracja2
 {
     public static class UserDatabase
     {
-        public readonly static string logins = "users.txt";
 
-        private static string filePath = "users.txt";
+        private static readonly string filePath = "users.txt";
 
 
         public static List<User> LoadUsers()
         {
-            List<User> users = new();
+            List<User> users = new List<User>();
 
             if (!File.Exists(filePath))
             {
@@ -38,7 +37,7 @@ namespace Rejestracja2
 
         public static void SaveUsers(List<User> users)
         {
-            List<string> lines = new();
+            List<string> lines = new List<string>();
 
             foreach (User user in users)
             {
