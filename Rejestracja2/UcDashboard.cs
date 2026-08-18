@@ -22,5 +22,21 @@ namespace Rejestracja2
         {
             labelTime.Text = System.DateTime.Now.ToString("dd.MM.yyyy\nHH:mm:ss");
         }
+
+        private void btnNewPatient_Click(object sender, EventArgs e)
+        {
+            Panel parentPanel = (Panel)this.Parent;
+
+            if (parentPanel != null)
+            {
+                parentPanel.Controls.Clear();
+
+                UcNewPatient newPatientPanel = new UcNewPatient();
+
+                newPatientPanel.Dock = DockStyle.Fill;
+
+                parentPanel.Controls.Add(newPatientPanel);
+            }
+        }
     }
 }

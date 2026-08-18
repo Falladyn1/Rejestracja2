@@ -72,6 +72,7 @@
             btnNewPatient.TabIndex = 1;
             btnNewPatient.Text = "Nowy Pacjent";
             btnNewPatient.UseVisualStyleBackColor = false;
+            btnNewPatient.Click += btnNewPatient_Click;
             // 
             // panelPatientNum
             // 
