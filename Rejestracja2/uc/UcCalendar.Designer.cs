@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnPrev = new Button();
             btnNext = new Button();
             lblMonthYear = new Label();
@@ -74,23 +75,38 @@
             // 
             // dataGridViewCalendar
             // 
+            dataGridViewCalendar.AllowUserToAddRows = false;
+            dataGridViewCalendar.BackgroundColor = Color.White;
             dataGridViewCalendar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCalendar.Location = new Point(72, 37);
             dataGridViewCalendar.Name = "dataGridViewCalendar";
+            dataGridViewCalendar.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewCalendar.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCalendar.RowHeadersVisible = false;
             dataGridViewCalendar.RowHeadersWidth = 51;
             dataGridViewCalendar.Size = new Size(636, 322);
             dataGridViewCalendar.TabIndex = 3;
+            dataGridViewCalendar.CellClick += DataGridViewCalendar_CellClick;
             // 
             // UcCalendar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(dataGridViewCalendar);
             Controls.Add(lblMonthYear);
             Controls.Add(btnNext);
             Controls.Add(btnPrev);
             Name = "UcCalendar";
             Size = new Size(785, 438);
+            Load += UcCalendar_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewCalendar).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -34,23 +34,19 @@
             label3 = new Label();
             textBoxPasswd = new TextBox();
             btnLogin = new Button();
-            labelRegister = new Label();
             labelWrong = new Label();
-            textBoxPasswd2 = new TextBox();
             label4 = new Label();
-            btnRegister = new Button();
-            labelWrong2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.Font = new Font("Segoe UI Black", 36F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(510, 136);
+            label1.Location = new Point(434, 97);
             label1.Name = "label1";
-            label1.Size = new Size(263, 54);
+            label1.Size = new Size(414, 81);
             label1.TabIndex = 0;
             label1.Text = "LOGOWANIE";
             // 
@@ -68,7 +64,7 @@
             // 
             // textBoxLogin
             // 
-            textBoxLogin.BackColor = SystemColors.Menu;
+            textBoxLogin.BackColor = Color.White;
             textBoxLogin.BorderStyle = BorderStyle.FixedSingle;
             textBoxLogin.Location = new Point(510, 245);
             textBoxLogin.Name = "textBoxLogin";
@@ -89,7 +85,7 @@
             // 
             // textBoxPasswd
             // 
-            textBoxPasswd.BackColor = SystemColors.Menu;
+            textBoxPasswd.BackColor = Color.White;
             textBoxPasswd.BorderStyle = BorderStyle.FixedSingle;
             textBoxPasswd.Location = new Point(510, 317);
             textBoxPasswd.Name = "textBoxPasswd";
@@ -102,104 +98,44 @@
             btnLogin.BackColor = Color.Cyan;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             btnLogin.ForeColor = Color.Black;
-            btnLogin.Location = new Point(659, 350);
+            btnLogin.Location = new Point(645, 350);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(114, 33);
+            btnLogin.Size = new Size(128, 45);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Zaloguj";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
-            // 
-            // labelRegister
-            // 
-            labelRegister.AutoSize = true;
-            labelRegister.Cursor = Cursors.Hand;
-            labelRegister.Font = new Font("Segoe UI", 10.2F, FontStyle.Underline, GraphicsUnit.Point, 238);
-            labelRegister.ForeColor = SystemColors.MenuHighlight;
-            labelRegister.Location = new Point(510, 386);
-            labelRegister.Name = "labelRegister";
-            labelRegister.Size = new Size(159, 23);
-            labelRegister.TabIndex = 6;
-            labelRegister.Text = "Utwórz nowe konto";
-            labelRegister.Click += labelRegister_Click;
             // 
             // labelWrong
             // 
             labelWrong.AutoSize = true;
             labelWrong.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 238);
             labelWrong.ForeColor = Color.Brown;
-            labelWrong.Location = new Point(548, 354);
+            labelWrong.Location = new Point(547, 188);
             labelWrong.Name = "labelWrong";
             labelWrong.Size = new Size(188, 23);
             labelWrong.TabIndex = 7;
             labelWrong.Text = "Błędny login lub hasło";
             labelWrong.Visible = false;
             // 
-            // textBoxPasswd2
-            // 
-            textBoxPasswd2.BackColor = SystemColors.Menu;
-            textBoxPasswd2.BorderStyle = BorderStyle.FixedSingle;
-            textBoxPasswd2.Location = new Point(510, 389);
-            textBoxPasswd2.Name = "textBoxPasswd2";
-            textBoxPasswd2.Size = new Size(263, 27);
-            textBoxPasswd2.TabIndex = 8;
-            textBoxPasswd2.UseSystemPasswordChar = true;
-            textBoxPasswd2.Visible = false;
-            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(510, 355);
+            label4.Location = new Point(510, 350);
             label4.Name = "label4";
-            label4.Size = new Size(161, 31);
-            label4.TabIndex = 9;
-            label4.Text = "Powtórz hasło";
-            label4.Visible = false;
-            // 
-            // btnRegister
-            // 
-            btnRegister.BackColor = Color.Cyan;
-            btnRegister.FlatAppearance.BorderSize = 0;
-            btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(659, 422);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(114, 33);
-            btnRegister.TabIndex = 10;
-            btnRegister.Text = "Zarejestruj";
-            btnRegister.UseVisualStyleBackColor = false;
-            btnRegister.Visible = false;
-            btnRegister.Click += btnRegister_Click;
-            // 
-            // labelWrong2
-            // 
-            labelWrong2.AutoSize = true;
-            labelWrong2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            labelWrong2.ForeColor = Color.Brown;
-            labelWrong2.Location = new Point(548, 426);
-            labelWrong2.Name = "labelWrong2";
-            labelWrong2.Size = new Size(188, 23);
-            labelWrong2.TabIndex = 11;
-            labelWrong2.Text = "Błędny login lub hasło";
-            labelWrong2.Visible = false;
+            label4.Size = new Size(97, 20);
+            label4.TabIndex = 8;
+            label4.Text = "admin admin";
             // 
             // UcLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(labelWrong2);
-            Controls.Add(btnRegister);
             Controls.Add(label4);
-            Controls.Add(textBoxPasswd2);
             Controls.Add(labelWrong);
-            Controls.Add(labelRegister);
             Controls.Add(btnLogin);
             Controls.Add(textBoxPasswd);
             Controls.Add(label3);
@@ -220,11 +156,7 @@
         private Label label3;
         private TextBox textBoxPasswd;
         private Button btnLogin;
-        private Label labelRegister;
         private Label labelWrong;
-        private TextBox textBoxPasswd2;
         private Label label4;
-        private Button btnRegister;
-        private Label labelWrong2;
     }
 }

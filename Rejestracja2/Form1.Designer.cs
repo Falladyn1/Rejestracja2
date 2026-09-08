@@ -33,6 +33,7 @@
             // 
             // panelMain
             // 
+            panelMain.BackColor = Color.White;
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(0, 0);
             panelMain.Name = "panelMain";
@@ -45,6 +46,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 673);
             Controls.Add(panelMain);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "SRP";
             ResumeLayout(false);
